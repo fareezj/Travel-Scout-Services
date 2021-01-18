@@ -3,7 +3,7 @@ package com.wolf.TravelScout.controller;
 import com.wolf.TravelScout.config.JwtTokenUtil;
 import com.wolf.TravelScout.model.JwtRequest;
 import com.wolf.TravelScout.model.JwtResponse;
-import com.wolf.TravelScout.model.UserDTO;
+import com.wolf.TravelScout.model.user.UserDTO;
 import com.wolf.TravelScout.service.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

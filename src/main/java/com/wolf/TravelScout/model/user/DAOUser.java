@@ -1,11 +1,32 @@
-package com.wolf.TravelScout.model;
+package com.wolf.TravelScout.model.user;
 
-public class UserDTO {
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
+public class DAOUser {
+
+    @Column(name = "USER_ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @Column(name = "USERNAME")
     private String username;
+
+    @Column(name = "PASSWORD")
+    @JsonIgnore
     private String password;
+
+    @Column(name = "FIRST_NAME")
     private String firstName;
+
+    @Column(name = "LAST_NAME")
     private String lastName;
+
+    @Column(name = "EMAIL")
     private String email;
 
     public String getUsername() {

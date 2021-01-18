@@ -1,8 +1,8 @@
 package com.wolf.TravelScout.service;
 
 import com.wolf.TravelScout.dao.UserDao;
-import com.wolf.TravelScout.model.DAOUser;
-import com.wolf.TravelScout.model.UserDTO;
+import com.wolf.TravelScout.model.user.DAOUser;
+import com.wolf.TravelScout.model.user.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

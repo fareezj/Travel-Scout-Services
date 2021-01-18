@@ -1,6 +1,6 @@
 package com.wolf.TravelScout.dao;
 
-import com.wolf.TravelScout.model.DAOUser;
+import com.wolf.TravelScout.model.user.DAOUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
