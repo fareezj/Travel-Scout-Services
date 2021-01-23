@@ -23,8 +23,8 @@ public class DAOUser {
     @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "LAST_NAME")
-    private String lastName;
+    @Column(name = "PHONE")
+    private String phone;
 
     @Column(name = "EMAIL")
     private String email;
@@ -53,12 +53,12 @@ public class DAOUser {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setPhone(String lastName) {
+        this.phone = lastName;
     }
 
     public String getEmail() {
