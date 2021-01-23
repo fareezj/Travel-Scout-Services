@@ -8,26 +8,45 @@ import javax.persistence.*;
 @Table(name = "user")
 public class DAOUser {
 
-    @Column(name = "USER_ID")
+    @Column(name = "user_id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "USERNAME")
+    @Column(name = "username")
     private String username;
 
-    @Column(name = "PASSWORD")
+    @Column(name = "password")
     @JsonIgnore
     private String password;
 
-    @Column(name = "FIRST_NAME")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "PHONE")
+    @Column(name = "phone")
     private String phone;
 
-    @Column(name = "EMAIL")
+    @Column(name = "email")
     private String email;
+
+    public DAOUser() {}
+
+    public DAOUser(int id, String username, String password, String firstName, String phone, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.phone = phone;
+        this.email = email;
+    }
+
+    public DAOUser(String username, String password, String firstName, String phone, String email) {
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.phone = phone;
+        this.email = email;
+    }
 
     public String getUsername() {
         return username;
