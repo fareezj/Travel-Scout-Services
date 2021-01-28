@@ -7,6 +7,8 @@ public class UserDTO {
     private String firstName;
     private String phone;
     private String email;
+    private String profileImage;
+    private String upcomingTrip;
 
     public String getUsername() {
         return username;
@@ -46,5 +48,21 @@ public class UserDTO {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getUpcomingTrip() {
+        return upcomingTrip;
+    }
+
+    public void setUpcomingTrip(String upcomingTrip) {
+        this.upcomingTrip = upcomingTrip;
+    }
+
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
     }
 }

@@ -19,6 +19,6 @@ public class AddTripController {
 
     @GetMapping({ "/searchfriend/{username}" })
     public List<DAOUser> searchFriend(@PathVariable String username) {
-        return searchFriendRepository.findByUsername(username);
+        return searchFriendRepository.findByUsernameContaining(username);
     }
 }

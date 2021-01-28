@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface SearchFriendRepository extends JpaRepository<DAOUser, Integer> {
 
-    List<DAOUser> findByUsername(String username);
+    List<DAOUser> findByUsernameContaining(String username);
 }

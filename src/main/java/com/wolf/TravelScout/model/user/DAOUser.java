@@ -11,7 +11,7 @@ public class DAOUser {
     @Column(name = "user_id")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int userId;
 
     @Column(name = "username")
     private String username;
@@ -29,23 +29,41 @@ public class DAOUser {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "profile_image")
+    private String profileImage;
+
+    @Column(name = "upcoming_trip")
+    private String upcomingTrip;
+
     public DAOUser() {}
 
-    public DAOUser(int id, String username, String password, String firstName, String phone, String email) {
-        this.id = id;
+    public DAOUser(int userId, String username, String password, String firstName, String phone, String email, String profileImage, String upcomingTrip) {
+        this.userId = userId;
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.phone = phone;
         this.email = email;
+        this.profileImage = profileImage;
+        this.upcomingTrip = upcomingTrip;
     }
 
-    public DAOUser(String username, String password, String firstName, String phone, String email) {
+    public DAOUser(String username, String password, String firstName, String phone, String email, String profileImage, String upcomingTrip) {
         this.username = username;
         this.password = password;
         this.firstName = firstName;
         this.phone = phone;
         this.email = email;
+        this.profileImage = profileImage;
+        this.upcomingTrip = upcomingTrip;
+    }
+
+    public int getId() {
+        return userId;
+    }
+
+    public void setId(int userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -86,5 +104,21 @@ public class DAOUser {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getProfileImage() {
+        return profileImage;
+    }
+
+    public void setProfileImage(String profileImage) {
+        this.profileImage = profileImage;
+    }
+
+    public String getUpcomingTrip() {
+        return upcomingTrip;
+    }
+
+    public void setUpcomingTrip(String upcomingTrip) {
+        this.upcomingTrip = upcomingTrip;
     }
 }
