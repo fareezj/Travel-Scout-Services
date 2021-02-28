@@ -2,8 +2,11 @@ package com.wolf.TravelScout.controller.trip;
 
 
 import com.wolf.TravelScout.dao.trip.TripListRepository;
+import com.wolf.TravelScout.model.JwtResponse;
+import com.wolf.TravelScout.model.dashboard.DashboardDAO;
 import com.wolf.TravelScout.model.trip.DAOTrip;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,7 +28,8 @@ public class TripListController {
     }
 
     @DeleteMapping(value = "/deleteTrip/{tripId}")
-    public void deleteTripById(@PathVariable int tripId) {
+    public ResponseEntity<?> deleteTripById(@PathVariable int tripId) {
         tripListRepository.deleteById(tripId);
+        return ResponseEntity.ok(new DashboardDAO("Trip Deleted"));
     }
 }
