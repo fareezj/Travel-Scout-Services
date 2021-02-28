@@ -23,4 +23,9 @@ public class TripListController {
     public List<DAOTrip> getTrip(){
         return tripListRepository.findAll();
     }
+
+    @DeleteMapping(value = "/deleteTrip/{tripId}")
+    public void deleteTripById(@PathVariable int tripId) {
+        tripListRepository.deleteById(tripId);
+    }
 }
