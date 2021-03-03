@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TripListController {
@@ -31,5 +32,16 @@ public class TripListController {
     public ResponseEntity<?> deleteTripById(@PathVariable int tripId) {
         tripListRepository.deleteById(tripId);
         return ResponseEntity.ok(new DashboardDAO("Trip Deleted"));
+    }
+
+    @PutMapping("/updateTrip/{tripId}")
+    public DAOTrip updateTrip(@PathVariable int tripId, @RequestBody DAOTrip tripDetails) {
+
+        Optional<DAOTrip> trip = tripListRepository.findById(tripId);
+        if(!trip.isPresent()){
+            return null;
+        }
+        return tripListRepository.save(tripDetails);
+
     }
 }

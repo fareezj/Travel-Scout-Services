@@ -46,7 +46,6 @@ public class DAOTrip {
 
     public DAOTrip(int hostId, String country, String tripName, String tripDate, String tripType, String friendList) {
         this.country = country;
-        this.tripId = tripId;
         this.hostId = hostId;
         this.tripName = tripName;
         this.tripDate = tripDate;
